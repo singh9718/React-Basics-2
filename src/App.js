@@ -19,7 +19,7 @@ function App() {
     try {
       let response = await fetch(apiUrl);
       let output = await response.json();
-      setCourses(output);
+      setCourses(output.data);
       // console.log(output);
     }
 
@@ -34,7 +34,7 @@ function App() {
   }, [])
 
   return (
-    <div>
+    <div className='min-h-screen flex flex-col'>
 
       <div>
         <Navbar />

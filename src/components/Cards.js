@@ -7,11 +7,11 @@ const Cards = (props) => {
 
   function getCourses() {
     let allCourses = [];
-    if (Array.isArray(courses)) {
-      courses.forEach(courseData => {
+    Object.values(courses).forEach(array => {
+      array.forEach(courseData => {
         allCourses.push(courseData);
       });
-    }
+    });
     return allCourses;
   }
 
